@@ -1,0 +1,113 @@
+
+/* ==========================Reset===================================== */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==========================Variable===================================== */
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+body {
+    Font-size: 18px;
+    height: 100vh;
+}
+
+.continer {
+    background-color: var(--Dark-cyan);
+    /*background-image: linear-gradient(url(../profile-card-component-main/images/bg-pattern-bottom.svg), red);
+    */background-image: url(../profile-card-component-main/images/bg-pattern-bottom.svg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    animation: moves;
+    -webkit-animation: moves 20s alternate 1;
+}
+@keyframes moves {
+    0%, 100% {
+        background-size: 20px;
+    }
+    20% {
+        background-size: 100px;
+    }
+    40% {
+        background-size: 500px;
+    }
+    60% {
+        background-size: 800px;
+    }
+    80% {
+        background-size: 1000px;
+    }
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0 0 15px 0 var(--Dark-grayish-blue);
+
+}
+
+
+.top img {
+    border-radius: 15px 15px 0 0;
+}
+
+
+.medium {
+    position: relative;
+}
+
+.medium img {
+    border-radius: 50%;
+    border: 6px solid white;
+    position: absolute;
+    top: -59px;
+    transform: translateX(-50%);
+}
+.medium h2 {
+    margin-top: 65px;
+}
+h2 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 25px;
+    font-weight: bolder;
+}
+span {
+    color: var(--Dark-gray);
+}
+
+.end {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+    padding: 25px 25px;
+    border-top: 1px solid var(--Dark-cyan);
+    width: 100%;
+    justify-content: space-evenly;
+}
+.end p {
+    color: var(--Dark-gray);
+    margin-top: 5px;
+}
